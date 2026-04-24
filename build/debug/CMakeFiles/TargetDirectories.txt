@@ -1,0 +1,3 @@
+/home/jole/projects/MPoint/build/debug/CMakeFiles/point.dir
+/home/jole/projects/MPoint/build/debug/CMakeFiles/edit_cache.dir
+/home/jole/projects/MPoint/build/debug/CMakeFiles/rebuild_cache.dir

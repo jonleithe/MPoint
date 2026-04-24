@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure (Debug GCC)",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "debug-gcc"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build (Debug)",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "build-debug"],
+      "dependsOn": "Configure (Debug GCC)",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Configure (Release GCC)",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "release-gcc"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build (Release)",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "build-release"],
+      "dependsOn": "Configure (Release GCC)",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": "./bin/point",
+      "dependsOn": "Build (Debug)",
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "rm",
+      "args": ["-rf", "build", "bin/point"],
+      "problemMatcher": []
+    }
+  ]
+}

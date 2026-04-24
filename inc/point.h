@@ -17,7 +17,10 @@ class MPoint{
         //float   x, y;
      
     public:
+        MPoint(int _x, int _y);
         MPoint(float _x, float _y);
+        MPoint(double _x, double _y);
+        ~MPoint();
 
         float   get_x(void);
         float   get_y(void);

@@ -13,12 +13,38 @@ MPoint::MPoint(int x, int y)
 
 
 
-MPoint::MPoint(float _x = 0, float _y = 0)
+MPoint::MPoint(int _x, int _y)
 {
-    p = new point;
-    p->x = _x;
-    p->y = _y;
+    p       = new point;
+    p->x    = static_cast<float>(_x);
+    p->y    = static_cast<float>(_y);
 }
+
+
+
+MPoint::MPoint(float _x, float _y)
+{
+    p       = new point;
+    p->x    = _x;
+    p->y    = _y;
+}
+
+
+
+MPoint::MPoint(double _x, double _y)
+{
+    p       = new point;
+    p->x    = static_cast<float>(_x);
+    p->y    = static_cast<float>(_y);
+}
+
+
+
+MPoint::~MPoint()
+{
+    delete p;
+}
+
 
 
 /*
