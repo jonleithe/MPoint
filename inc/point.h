@@ -1,4 +1,4 @@
-// Add include guards to prevent multiple inclusions of the header file
+// Add include-guards to prevent multiple inclusions of the header file
 #pragma once
 
 // ─── Include section ─────────────────────────────────────────────────────────
