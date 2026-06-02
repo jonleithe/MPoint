@@ -9,11 +9,10 @@
 
 int main(int argc, char* argv[])
 {
-    MPoint* p = new MPoint(M_PI, 2 * M_PI);
+    MPoint p(1.431415, 1.398764);
 
-    
-    std::cout << "x = " << p->get_x() << std::endl;
-    std::cout << "y = " << p->get_y() << std::endl;
-    
-    delete p;
+    printf("x: %f\n", p.get_x());
+    printf("y: %f\n", p.get_y());
+
+    return 0;
 }
